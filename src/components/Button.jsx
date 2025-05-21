@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-const GlassButton = ({ to, children }) => {
+const GetButton = ({ to, children }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
 
@@ -19,4 +19,4 @@ const GlassButton = ({ to, children }) => {
   );
 };
 
-export default GlassButton;
+export default GetButton;

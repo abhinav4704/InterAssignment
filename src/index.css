@@ -1,3 +1,6 @@
-
-
 @import "tailwindcss";
+
+body, button, a {
+    cursor: none;
+  }
+  

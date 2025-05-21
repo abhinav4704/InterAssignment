@@ -3,7 +3,7 @@ import React from "react";
 const ContactPage = () => {
   return (
     <div>
-        <div className="max-w-3xl mx-auto p-8 text-white">
+        <div className="max-w-3xl mx-auto p-8 text-gray-800">
   <h2 className="text-4xl font-semibold mb-6">Get In Touch</h2>
   
   <p className="mb-6">
@@ -11,9 +11,9 @@ const ContactPage = () => {
   </p>
 
   <ul className="mb-8">
-    <li><strong>Email:</strong> your.email@example.com</li>
-    <li><strong>LinkedIn:</strong> linkedin.com/in/yourprofile</li>
-    <li><strong>GitHub:</strong> github.com/yourusername</li>
+    <li><strong>Email:</strong> abhinav4704@gmail.com</li>
+    <li><strong>LinkedIn:</strong> www.linkedin.com/in/abhinav-l/</li>
+    <li><strong>GitHub:</strong> github.com/abhianv4704</li>
   </ul>
 
   <form className="flex flex-col space-y-4 max-w-md">

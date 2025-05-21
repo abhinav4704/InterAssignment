@@ -67,7 +67,7 @@ const TestimonialsCarousel = () => {
   return (
     <>
       <style>{styles}</style>
-      <div className="overflow-hidden relative bg-gray-100 py-10">
+      <div className="overflow-hidden relative bg-gray-100 py-10 mb-10">
         <div
           className="inline-flex space-x-8 animate-scrollLeft"
           style={{
