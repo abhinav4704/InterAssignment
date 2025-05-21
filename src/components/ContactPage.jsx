@@ -17,13 +17,35 @@ const ContactPage = () => {
   </ul>
 
   <form className="flex flex-col space-y-4 max-w-md">
-    <input type="text" placeholder="Your Name" className="p-3 rounded-md bg-white/10 border border-white/30 text-white" />
-    <input type="email" placeholder="Your Email" className="p-3 rounded-md bg-white/10 border border-white/30 text-white" />
-    <textarea placeholder="Your Message" rows={5} className="p-3 rounded-md bg-white/10 border border-white/30 text-white" />
-    <button className="px-6 py-3 rounded-4xl backdrop-blur-md bg-white/10 border border-white/30 text-white shadow-md hover:bg-white/20 transition-all duration-300">
-      Send Message
-    </button>
-  </form>
+  <input
+    type="text"
+    placeholder="Your Name"
+    className="p-3 rounded-md bg-black/30 border border-white/60 text-white placeholder-white/70
+               focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400
+               transition-all duration-300"
+  />
+  <input
+    type="email"
+    placeholder="Your Email"
+    className="p-3 rounded-md bg-black/30 border border-white/60 text-white placeholder-white/70
+               focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400
+               transition-all duration-300"
+  />
+  <textarea
+    placeholder="Your Message"
+    rows={5}
+    className="p-3 rounded-md bg-black/30 border border-white/60 text-white placeholder-white/70
+               focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400
+               transition-all duration-300"
+  />
+  <button className="px-6 py-3 rounded-4xl backdrop-blur-md bg-white/10 border border-white/30 text-white 
+                     shadow-md hover:bg-white/20 hover:shadow-cyan-400/50 
+                     focus:outline-none focus:ring-2 focus:ring-cyan-400 transition-all duration-300">
+    Send Message
+  </button>
+</form>
+
+
 </div>
 
     </div>
