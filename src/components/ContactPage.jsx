@@ -1,6 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
         <div className="max-w-3xl mx-auto p-8 text-gray-800">
