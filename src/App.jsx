@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import bgImage from "./assets/black8k.jpg";
@@ -11,14 +11,25 @@ import Footer from "./components/Footer.jsx";
 import SmoothCursor from "./components/Smoothcursor.jsx";
 
 const App = () => {
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bgImage;
+    img.onload = () => setBgLoaded(true);
+  }, []);
+
   return (
     <div className="relative min-h-screen text-white overflow-x-hidden">
-      {/* Fixed Background Image */}
-      <SmoothCursor></SmoothCursor>
+      {/* Smooth Cursor */}
+      <SmoothCursor />
+
+      {/* Fixed Background Image with black fallback */}
       <div
-        className="fixed top-0 left-0 w-full h-full bg-cover bg-center -z-10"
+        className="fixed top-0 left-0 w-full h-full bg-center bg-cover -z-10 transition-all duration-700"
         style={{
-          backgroundImage: `url(${bgImage})`,
+          backgroundColor: bgLoaded ? "transparent" : "black",
+          backgroundImage: bgLoaded ? `url(${bgImage})` : "none",
         }}
       />
 
@@ -26,7 +37,7 @@ const App = () => {
       <Navbar />
 
       {/* Page Content */}
-      <div className="pt-28"> {/* Add padding top to prevent overlap with fixed navbar */}
+      <div className="pt-28"> {/* padding top to prevent overlap with fixed navbar */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -34,7 +45,8 @@ const App = () => {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
-      <Footer/>
+
+      <Footer />
     </div>
   );
 };
