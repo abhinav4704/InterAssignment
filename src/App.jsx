@@ -12,7 +12,7 @@ import SmoothCursor from "./components/Smoothcursor.jsx";
 
 const App = () => {
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="relative min-h-screen text-white overflow-x-hidden">
       {/* Fixed Background Image */}
       <SmoothCursor></SmoothCursor>
       <div
@@ -26,7 +26,7 @@ const App = () => {
       <Navbar />
 
       {/* Page Content */}
-      <div className="pt-24"> {/* Add padding top to prevent overlap with fixed navbar */}
+      <div className="pt-28"> {/* Add padding top to prevent overlap with fixed navbar */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
